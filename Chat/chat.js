@@ -1,7 +1,8 @@
 const express = require('express');
-const path = require('path');
-
 const app = express();
+const path = require('path');
+const server = require('http').Server(app);
+const io = require('socket.io')(server, {serveClient: true});
 
 const handlers = require('express-handlebars').create({
     defaultLayout: 'main',
@@ -25,6 +26,10 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.listen(app.get('port'), () => {
+io.on('connection', (socket) => {
+    socket.emit('connected', 'YEAH!');
+});
+
+server.listen(app.get('port'), () => {
     console.log(`Сервер запущен на порте: ${app.get('port')}`);
  });
