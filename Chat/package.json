@@ -10,8 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "mongoose": "^4.12.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
