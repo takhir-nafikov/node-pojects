@@ -64,3 +64,6 @@ typings/
 # Intellij
 .idea
 
+# My
+credentials.js
+IgnorGit
