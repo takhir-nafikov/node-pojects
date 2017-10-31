@@ -22,6 +22,7 @@ $ node app remove "Koa"
 ```
 ---
 ### Chat
+
 Чат с использованием [Express], [Socket], [Mongoose], [Passport].
 В чате реализована одна комната. 
 ---
